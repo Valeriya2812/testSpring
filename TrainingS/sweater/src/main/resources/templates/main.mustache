@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>Getting Started: Serving Web Content</title>
+
+</head>
+<body>
+<div>
+    <form action="add" method="post">
+        <input type="text" name="text" placeholder="Введите текст"/>
+        <input type="text" name="tag" placeholder="Введите tag"/>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+
+
+{{#messages}}
+<div>{{id}}</div>
+<div>{{text}}</div>
+<div>{{tag}}</div>
+{{/messages}}
+</body>
+</html>
