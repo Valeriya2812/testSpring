@@ -5,19 +5,30 @@
 </head>
 <body>
 <div>
-    <form action="add" method="post">
+    <form action="/logout" method="post">
+        <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
+        <input type="submit" value="Sign Out"/>
+    </form>
+</div>
+<div>
+    <form action="main" method="post">
         <input type="text" name="text" placeholder="Введите текст"/>
         <input type="text" name="tag" placeholder="Введите tag"/>
+        <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
         <button type="submit">Submit</button>
     </form>
 </div>
-
-
-
+<div>
+    <form action="filter" method="post">
+        <input type="text" name="tag">
+        <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
+        <button type="submit">Search</button>
+    </form>
+</div>
 {{#messages}}
-<div>{{id}}</div>
-<div>{{text}}</div>
-<div>{{tag}}</div>
+    <div>{{id}}</div>
+    <div>{{text}}</div>
+    <div>{{tag}}</div>
 {{/messages}}
 </body>
 </html>
