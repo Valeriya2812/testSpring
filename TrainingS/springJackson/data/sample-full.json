@@ -1,0 +1,12 @@
+{
+  "id": 14,
+  "firstName":"Mario",
+  "lastName": "Rossie",
+  "active":true,
+  "address": {
+    "street": "Main St",
+    "city": "Kharkiv",
+    "country": "Ukraine"
+  },
+  "languages": ["Java", "C++", "Python"]
+}
