@@ -9,6 +9,9 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)// чтобы айди самостоятельно генерировался
     private Long id;
+    private String username;
+    private String password;
+    private boolean active;
 
     public User() {
     }
@@ -45,9 +48,7 @@ public class User {
         this.username = username;
     }
 
-    private String username;
-    private String password;
-    private boolean active;
+
 
     public Long getId() {
         return id;
